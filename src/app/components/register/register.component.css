@@ -5,7 +5,7 @@
     text-decoration: none;
 }
 
-.login {
+.register {
     display: flex;
     flex-direction: column;
     margin-top: 50px;
@@ -15,6 +15,6 @@
     padding: 15px 0px 15px 0px;
 }
 
-.register {
+.cancelBtn {
     margin-left: 30px;
 }
