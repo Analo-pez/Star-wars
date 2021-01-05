@@ -11,7 +11,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
-    margin: 50px;
+    margin: 50px 50px 50px 150px;
 }
 
 .pagination {
@@ -19,4 +19,14 @@
     justify-content: center;
     margin-top: 30px;
     margin-bottom: 30px;
+}
+
+.starshipsBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pageOption {
+    width: 15%;
 }
