@@ -1,0 +1,22 @@
+<section class="starshipsBox">
+    <h1 class="title">Listado de naves</h1>
+    <div class="list">
+        <li *ngFor="let starship of starships  | paginate: { itemsPerPage: 9, currentPage: p }">
+            <div class="card" style="width: 18rem;">
+                <!-- <img src="..." class="card-img-top" alt="..."> -->
+                <div class="card-body">
+                    <h5 class="card-title">{{starship.name}}</h5>
+                    <p class="card-text">Class: {{starship.starship_class}}.</p>
+                    <p>
+                        Passengers: {{starship.passengers}}
+                    </p>
+                    <p>
+                        Max. Atmosphering Speed: {{starship.max_atmosphering_speed}}
+                    </p>
+                    <a href="{{starship.url}}" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </li>
+    </div>
+    <pagination-controls class="pagination" (pageChange)="p = $event"></pagination-controls>
+</section>
