@@ -11,12 +11,15 @@ export class ListComponent {
 
     starships: any[] = [];
 
+    loading: boolean = false;
+
     p: number = 1;
 
     constructor(private list: StarshipsService) {
-
+        this.loading = true;
         this.list.getList()
             .subscribe((data: any) => {
+                this.loading = false;
                 console.log(data.results);
                 this.starships = data.results;
 

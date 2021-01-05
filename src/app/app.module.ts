@@ -11,6 +11,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ListComponent } from './components/list/list.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 
 
@@ -21,7 +22,8 @@ import { ListComponent } from './components/list/list.component';
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    ListComponent
+    ListComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
