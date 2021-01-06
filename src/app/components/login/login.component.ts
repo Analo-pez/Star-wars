@@ -26,6 +26,12 @@ export class LoginComponent {
     if (form.invalid) {
       return;
     }
+    if (this.userRegister == null) {
+      alert('no es accesible')
+    }
+    if (this.person.password !== this.userRegister.password || this.person.userName !== this.userRegister.userName) {
+      alert('Los datos introducidos no coinciden')
+    }
     if (this.person.password === this.userRegister.password && this.person.userName === this.userRegister.userName) {
       console.log('tiene acceso')
     }
