@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { UserModel } from '../../models/user.model';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ export class LoginComponent {
   person: UserModel;
   userRegister: UserModel;
 
-  constructor() {
+  constructor(private router: Router) {
 
   }
   ngOnInit() {
@@ -33,6 +34,7 @@ export class LoginComponent {
       alert('Los datos introducidos no coinciden')
     }
     if (this.person.password === this.userRegister.password && this.person.userName === this.userRegister.userName) {
+      this.router.navigate(['listStarships']);
       console.log('tiene acceso')
     }
 
