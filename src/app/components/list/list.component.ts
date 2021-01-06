@@ -42,5 +42,14 @@ export class ListComponent {
             })
     }
 
+    ngOnInit() {
 
+        this.list.getStarships("1")
+            .subscribe((data: any) => {
+                this.loading = false;
+                this.starships = data.results;
+
+            })
+
+    }
 }

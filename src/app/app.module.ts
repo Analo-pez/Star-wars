@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, NgForm } from '@angular/forms';
+
 
 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -12,8 +14,6 @@ import { LoginComponent } from './components/login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ListComponent } from './components/list/list.component';
 import { LoadingComponent } from './components/loading/loading.component';
-import { NgModel } from '@angular/forms';
-
 
 
 
@@ -31,6 +31,7 @@ import { NgModel } from '@angular/forms';
     HttpClientModule,
     AppRoutingModule,
     NgxPaginationModule,
+    FormsModule
 
   ],
   providers: [],

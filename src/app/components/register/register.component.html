@@ -2,22 +2,24 @@
     <h2 class="title">
         Register
     </h2>
-    <form class="form">
+    <form (ngSubmit)="onSubmit(registerForm)" class="form" #registerForm="ngForm">
         <div class="form-group">
-            <label for="exampleInputEmail1">First name</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="fistNameInput">First name</label>
+            <input type="email" class="form-control" id="fistNameInput" aria-describedby="emailHelp" [(ngModel)]="person.firstName" name="first">
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">Last name</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <label for="lastNameInput">Last name</label>
+            <input type="text" class="form-control" id="lastNameInput" name="last" [(ngModel)]="person.lastName">
         </div>
+        <span class="msg" *ngIf="registerForm.submitted && registerForm.controls['user'].errors">El usuario es obligatorio</span>
         <div class="form-group">
-            <label for="exampleInputEmail1">Username</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="userNameInput">Username</label>
+            <input type="text" class="form-control" id="userNameInput" aria-describedby="emailHelp" [(ngModel)]="person.userName" name="user" min-length="2" required>
         </div>
+        <span class="msg" *ngIf="registerForm.submitted && registerForm.controls['password'].errors">La contraseña es obligatoria</span>
         <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <label for="passwordInput">Password</label>
+            <input type="password" class="form-control" id="userPasswordInput" [(ngModel)]="person.password" name="password" min-length="4" required>
         </div>
 
         <button type="submit" class="btn btn-primary">Register</button>
