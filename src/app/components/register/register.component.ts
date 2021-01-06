@@ -23,7 +23,7 @@ export class RegisterComponent {
 
 
     onSubmit(form: NgForm) {
-        console.log('activo')
+        localStorage.setItem('usuario', JSON.stringify(this.person))
         console.log(this.person)
         console.log(form)
     }
