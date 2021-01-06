@@ -16,7 +16,8 @@
 
 .pagination {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
     margin-top: 30px;
     margin-bottom: 30px;
 }

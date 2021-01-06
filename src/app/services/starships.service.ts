@@ -18,14 +18,10 @@ export class StarshipsService {
         return this.http.get<any>(url);
     }
 
-    getList(): Observable<any> {
-        return this.getQuery(`starships/`)
+    getStarships(page: string): Observable<any> {
+        return this.getQuery(`starships/?page=${page}`)
             .pipe(catchError(this.handleError))
     }
-    // getIssues(number: string): Observable<any> {
-    //     return this.getQuery(`starships/?page=${number}`)
-    //         .pipe(catchError(this.handleError))
-    // }
     handleError(error: any) {
         return throwError(error.message);
     }

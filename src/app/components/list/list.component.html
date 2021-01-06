@@ -1,8 +1,16 @@
 <section class="starshipsBox">
     <h1 class="title">Listado de naves</h1>
+    <div class="pagination">
+        <select name="page" #page>
+        <option *ngFor="let o of options" name="page"  >
+           {{o.name}}
+        </option>
+     </select>
+        <button (click)="print(page.value)">Elegir página</button>
+    </div>
     <app-loading *ngIf="loading"></app-loading>
     <div class="list">
-        <li *ngFor="let starship of starships  | paginate: { itemsPerPage: 6, currentPage: p }">
+        <li *ngFor="let starship of starships  | paginate: { itemsPerPage: 9, currentPage: p }">
             <div class="card" style="width: 18rem;">
                 <!-- <img src="..." class="card-img-top" alt="..."> -->
                 <div class="card-body">
@@ -19,5 +27,4 @@
             </div>
         </li>
     </div>
-    <pagination-controls class="pagination" (pageChange)="p = $event"></pagination-controls>
 </section>
