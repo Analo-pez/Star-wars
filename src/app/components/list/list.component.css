@@ -34,7 +34,7 @@
 }
 
 .starshipsBox {
-    background-image: url('../../../assets/space.jpg');
+    background-image: url('../../../assets/space3.jpg');
     display: flex;
     flex-direction: column;
     align-items: center;
