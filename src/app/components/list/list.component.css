@@ -21,6 +21,10 @@
     margin: 50px 50px 50px 150px;
 }
 
+.card-title {
+    text-transform: uppercase;
+}
+
 .pagination {
     display: flex;
     flex-direction: column;
