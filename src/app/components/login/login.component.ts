@@ -28,7 +28,7 @@ export class LoginComponent {
       return;
     }
     if (this.userRegister == null) {
-      alert('no es accesible')
+      alert('No está en el registro')
     }
     if (this.person.password !== this.userRegister.password || this.person.userName !== this.userRegister.userName) {
       alert('Los datos introducidos no coinciden')

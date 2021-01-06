@@ -9,13 +9,11 @@
             <input type="text" class="form-control" id="inputName" [(ngModel)]="person.userName" name="userName" min-length="2" required>
         </div>
         <span class="msg" *ngIf="loginForm.submitted && loginForm.controls['password'].errors">La contraseña es obligatoria</span>
-        <div class="form-group" data-validate="Passwor is required">
+        <div class="form-group" data-validate="password is required">
             <label for="inputPassword1">Password</label>
             <input type="current-password" class="form-control" id="inputPassword1" [(ngModel)]="person.password" name="password" min-length="4" required>
         </div>
-        <!-- PERMITIR LA RUTA SOLO SI COINCIDE CON USUARIO REGISTRADO -->
         <button type="submit" class="btn btn-primary">Login</button>
         <a class="register" routerLink="/register">Register</a>
     </form>
-    <!-- routerLink="/listStarships"  -->
 </section>

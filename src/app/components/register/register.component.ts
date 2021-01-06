@@ -1,7 +1,8 @@
-import { ClassField } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { UserModel } from '../../models/user.model';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+
 
 @Component({
     selector: 'app-register',
@@ -12,7 +13,7 @@ export class RegisterComponent {
 
     person: UserModel;
 
-    constructor() {
+    constructor(private router: Router) {
 
     }
 
@@ -24,7 +25,10 @@ export class RegisterComponent {
 
     onSubmit(form: NgForm) {
         localStorage.setItem('usuario', JSON.stringify(this.person))
-        console.log(this.person)
-        console.log(form)
+        if (form.invalid) {
+            return;
+        } else {
+            this.router.navigate(['login']);
+        }
     }
 }

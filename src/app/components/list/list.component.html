@@ -1,5 +1,6 @@
 <section class="starshipsBox">
-    <h1 class="title">Listado de naves</h1>
+    <a href="https://fontmeme.com/es/fuente-de-star-wars/"><img class="slogan" src="https://fontmeme.com/permalink/210106/f1f07113ca5efa2400bab3f0cd1ef5d4.png" alt="fuente-de-star-wars" border="0"></a>
+    <!-- <h1 class="title">Listado de naves</h1> -->
     <div class="pagination">
         <select name="page" #page>
         <option *ngFor="let o of options" name="page"  >
@@ -22,7 +23,7 @@
                     <p>
                         Max. Atmosphering Speed: {{starship.max_atmosphering_speed}}
                     </p>
-                    <a href="{{starship.url}}" class="btn btn-primary">Go somewhere</a>
+                    <a href="{{starship.url}}" class="btn btn-primary">More information</a>
                 </div>
             </div>
         </li>
